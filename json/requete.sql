@@ -10,29 +10,36 @@ WHERE Places_max > (SELECT COUNT() FROM inscription  WHERE inscription.Id_sessio
 AND Etat = 'en cours';
 
 -- Afficher le nombre d'inscrits par session de formation :
-SELECT Session_de_formation.Identifiant, COUNT() AS Nombre_d_inscrits
-FROM Inscription
-JOIN Session_de_formation ON Inscription.Session_de_formation = Session_de_formation.Identifiant
-GROUP BY Session_de_formation.Identifiant;
+SELECT Id_session, COUNT() AS Nombre_d_inscrits
+FROM inscription
+JOIN session  ON inscription.Id_session = session.Id_session
+GROUP BY session.Id_session;
 
 -- Afficher l'historique des sessions de formation d'un apprenant donné :
-SELECT Session_de_formation.*
-FROM Inscription
-JOIN Session_de_formation ON Inscription.Session_de_formation = Session_de_formation.Identifiant
-WHERE Inscription.Apprenant = [Identifiant de l'apprenant donné];
+SELECT Id_session.*
+FROM inscription
+JOIN session ON inscription.Id_session = session.Id_session
+WHERE inscription.Id_apprenant_ = [Identifiant de l'apprenant donné];
 
 -- Afficher la liste des sessions qui sont affectées à un formateur donné, triées par date de début :
 SELECT *
-FROM Session_de_formation
-WHERE Formateur = [Identifiant du formateur donné]
-ORDER BY Date_de_début;
+FROM session
+WHERE Id_Formateur = [Identifiant du formateur donné]
+ORDER BY Date_debut;
 
 -- Afficher la liste des apprenants d'une session donnée d'un formateur donné :
-SELECT Apprenant.*
-FROM Inscription
-JOIN Apprenant ON Inscription.Apprenant = Apprenant.Identifiant
-WHERE Inscription.Session_de_formation = [Identifiant de la session donnée]
-AND Session_de_formation.Formateur = [Identifiant du formateur donné];
+SELECT Id_apprenant_ .*
+FROM inscription 
+JOIN apprenant_ ON inscription.Id_apprenant_ = apprenant_.Id_apprenant_ 
+WHERE inscription.Id_session = [Identifiant de la session donnée]
+AND session.Id_Formateur  = [Identifiant du formateur donné];
+
+
+
+--  here
+
+
+
 
 -- Afficher l'historique des sessions de formation d'un formateur donné :
 SELECT Session_de_formation.*
