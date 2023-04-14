@@ -1,12 +1,12 @@
 -- Afficher les sessions de formation à venir qui ne se chevauchent pas avec une session donnée :
 SELECT *
-FROM Session_de_formation
-WHERE Date_de_fin < [Date de début de la session donnée] OR Date_de_début > [Date de fin de la session donnée];
+FROM session
+WHERE Date_fin  < [Date de début de la session donnée] OR Date_debut  > [Date de fin de la session donnée];
 
 -- Afficher les sessions de formation à venir avec des places encore disponibles :
-SELECT *
-FROM Session_de_formation
-WHERE Nombre_de_places_maximal > (SELECT COUNT() FROM Inscription WHERE Inscription.Session_de_formation = Session_de_formation.Identifiant)
+SELECT * 
+FROM session 
+WHERE Places_max  > (SELECT COUNT() FROM inscription  WHERE inscription.Id_session  = Identifiant)
 AND Etat = 'en cours';
 
 -- Afficher le nombre d'inscrits par session de formation :
