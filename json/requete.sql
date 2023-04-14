@@ -6,7 +6,7 @@ WHERE Date_fin  < [Date de début de la session donnée] OR Date_debut  > [Date 
 -- Afficher les sessions de formation à venir avec des places encore disponibles :
 SELECT * 
 FROM session 
-WHERE Places_max  > (SELECT COUNT() FROM inscription  WHERE inscription.Id_session  = Identifiant)
+WHERE Places_max > (SELECT COUNT() FROM inscription  WHERE inscription.Id_session  = Identifiant)
 AND Etat = 'en cours';
 
 -- Afficher le nombre d'inscrits par session de formation :
