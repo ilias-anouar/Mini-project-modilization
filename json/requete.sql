@@ -10,10 +10,10 @@ WHERE Places_max > (SELECT COUNT() FROM inscription  WHERE inscription.Id_sessio
 AND Etat = 'en cours';
 
 -- Afficher le nombre d'inscrits par session de formation :
-SELECT Session_de_formation.Identifiant, COUNT() AS Nombre_d_inscrits
-FROM Inscription
-JOIN Session_de_formation ON Inscription.Session_de_formation = Session_de_formation.Identifiant
-GROUP BY Session_de_formation.Identifiant;
+SELECT Id_session, COUNT() AS Nombre_d_inscrits
+FROM inscription
+JOIN session  ON inscription.Id_session = session.Id_session
+GROUP BY session.Id_session;
 
 -- Afficher l'historique des sessions de formation d'un apprenant donné :
 SELECT Session_de_formation.*
