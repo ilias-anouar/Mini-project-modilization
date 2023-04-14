@@ -133,7 +133,7 @@ INSERT INTO `formation_` (`Id_formation_`, `sujet`, `categorie`, `masse_horaire`
 CREATE TABLE `inscription` (
   `Id_session` int(11) NOT NULL,
   `Id_apprenant_` int(11) NOT NULL,
-  `evaluation` varchar(50) DEFAULT NULL
+  `evaluation` varchar(50) DEFAULT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
