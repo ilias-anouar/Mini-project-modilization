@@ -7,7 +7,7 @@ WHERE Date_de_fin < [Date de début de la session donnée] OR Date_de_début > [
 SELECT *
 FROM Session_de_formation
 WHERE Nombre_de_places_maximal > (SELECT COUNT() FROM Inscription WHERE Inscription.Session_de_formation = Session_de_formation.Identifiant)
-AND Etat = 'en cours d inscription';
+AND Etat = 'en cours';
 
 -- Afficher le nombre d'inscrits par session de formation :
 SELECT Session_de_formation.Identifiant, COUNT() AS Nombre_d_inscrits
