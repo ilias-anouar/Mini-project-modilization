@@ -43,32 +43,34 @@ AND session.Id_Formateur  = [Identifiant du formateur donné];
 
 -- Afficher l'historique des sessions de formation d'un formateur donné :
 SELECT Session_de_formation.*
-FROM Session_de_formation
-WHERE Formateur = [Identifiant du formateur donné];
+FROM Id_session
+WHERE Id_Formateur  = [Identifiant du formateur donné];
 
 -- Afficher les formateurs qui sont disponibles entre 2 dates :
 SELECT *
 FROM Formateur
-WHERE Identifiant NOT IN (
-SELECT DISTINCT Formateur
-FROM Session_de_formation
-WHERE Date_de_fin > [Date de début donnée] AND Date_de_début < [Date de fin donnée]
+WHERE Id_Formateur NOT IN (
+SELECT DISTINCT Id_Formateur
+FROM session 
+WHERE Date_fin  > [Date de début donnée] AND Date_debut < [Date de fin donnée]
 );
+
+
 
 -- Afficher toutes les sessions d une formation donnée :
 SELECT *
-FROM Session_de_formation
-WHERE Formation = [Identifiant de la formation donnée];
+FROM session
+WHERE Id_Formateur = [Identifiant de la formation donnée];
 
 -- Afficher le nombre total des sessions par catégorie de formation :
-SELECT Formation.Catégorie, COUNT() AS Nombre_de_sessions
-FROM Session_de_formation
-JOIN Formation ONSession_de_formation.Formation = Formation.Identifiant
-GROUP BY Formation.Catégorie;
+SELECT formation_.categorie, COUNT() AS Nombre_de_sessions
+FROM session
+JOIN formation_ ON session.Id_formation_  = formation_.Id_formation_ 
+GROUP BY formation_.categorie ;
 
 -- Afficher le nombre total des inscrits par catégorie de formation :
-SELECT Formation.Catégorie, COUNT() AS Nombre_d_inscrits
-FROM Inscription
-JOIN Session_de_formation ON Inscription.Session_de_formation = Session_de_formation.Identifiant
-JOIN Formation ON Session_de_formation.Formation = Formation.Identifiant
-GROUP BY Formation.Catégorie;
+SELECT formation_.categorie, COUNT() AS Nombre_d_inscrits
+FROM inscription
+JOIN session ON inscription.Id_session = session.Id_session
+JOIN formation_ ON session.Id_formation_ = formation_.Id_formation_ 
+GROUP BY formation_.categorie ;
