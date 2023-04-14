@@ -1,0 +1,37 @@
+[
+  {
+    "nom": "anouar",
+    "prenom": "ilias",
+    "email": "ilias@gmail.com",
+    "competences": "Gestion",
+    "password":"anouar01ilias"
+  },
+  {
+    "nom": "daifane",
+    "prenom": "yasmine",
+    "email": "yasmine@gmail.com",
+    "competences": "Self development",
+    "password":"daifane01yasmine"
+  },
+  {
+    "nom": "buik",
+    "prenom": "hussain",
+    "email": "hussain@gmail.com",
+    "competences": "Sensibilisation",
+    "password":"buik01hussain"
+  },
+  {
+    "nom": "buich",
+    "prenom": "fatima zahra",
+    "email": "fatima@gmail.com",
+    "competences": "Technologie",
+    "password":"buich01fatima"
+  },
+  {
+    "nom": "el ghali",
+    "prenom": "ikram",
+    "email": "ikram@gmail.com",
+    "competences": "Self development",
+    "password":"ghali01ikram"
+  }
+]

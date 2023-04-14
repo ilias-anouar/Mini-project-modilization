@@ -1,0 +1,86 @@
+[
+  {
+    "name": "arun",
+    "prenom": "jakson",
+    "email": "arun@gmail.com",
+    "password":"arun01jakson"
+  },
+  {
+    "name": "rajesh",
+    "prenom": "jony",
+    "email": "rajesh@gmail.com",
+    "password":"rajesh01jony"
+  },
+  {
+    "name": "moorthy",
+    "prenom": "azart",
+    "email": "moorthy@gmail.com",
+    "password":"moorthy01azart"
+  },
+  {
+    "name": "raja",
+    "prenom": "niki",
+    "email": "raja@gmail.com",
+    "password":"raja01niki"
+  },
+  {
+    "name": "usha",
+    "prenom": "kim",
+    "email": "usha@gmail.com",
+    "password":"usha01kim"
+  },
+  {
+    "name": "priya",
+    "prenom": "doja",
+    "email": "priya@gmail.com",
+    "password":"priya01doja"
+  },
+  {
+    "name": "Sundar",
+    "prenom": "riana",
+    "email": "Sundar@gmail.com",
+    "password":"Sundar01riana"
+  },
+  {
+    "name": "Kavitha",
+    "prenom": "ariana",
+    "email": "Kavitha@gmail.com",
+    "password":"Kavitha01ariana"
+  },
+  {
+    "name": "Dinesh",
+    "prenom": "megan",
+    "email": "Dinesh@gmail.com",
+    "password":"Dinesh01megan"
+  },
+  {
+    "name": "Hema",
+    "prenom": "taylor",
+    "email": "Dinesh@gmail.com",
+    "password":"Hema01taylor"
+  },
+  {
+    "name": "Gowri",
+    "prenom": "selina",
+    "email": "Gowri@gmail.com",
+    "password":"Gowri01selina"
+  },
+  {
+    "name": "Ram",
+    "prenom": "zine",
+    "email": "Ram@gmail.com",
+    "password":"Ram01zine"
+  },
+  {
+    "name": "Murugan",
+    "prenom": "henry",
+    "email": "Murugan@gmail.com",
+    "password":"Murugan01henry"
+  },
+  {
+    "name": "Jenifer",
+    "prenom": "dounia",
+    "email": "Jenifer@gmail.com",
+    "password":"Jenifer01dounia"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "sujet": "La communication",
+    "categorie": "Self development",
+    "masse horaire": "20"
+  },
+  {
+    "sujet": "Diversité et inclusion",
+    "categorie": "Gestion",
+    "masse horaire": "10"
+  },
+  {
+    "sujet": "Gestion du temps",
+    "categorie": "Gestion",
+    "masse horaire": "15"
+  },
+  {
+    "sujet": "Rédaction professionnelle",
+    "categorie": "Gestion",
+    "masse horaire": "20"
+  },
+  {
+    "sujet": "Gestion du stress",
+    "categorie": "Gestion",
+    "masse horaire": "14"
+  },
+  {
+    "sujet": "Sensibilisation à la sécurité",
+    "categorie": "Sensibilisation",
+    "masse horaire": "20"
+  },
+  {
+    "sujet": "Technologie d assistance",
+    "categorie": "Technologie",
+    "masse horaire": "16"
+  },
+  {
+    "sujet": "L éthique",
+    "categorie": "Self development",
+    "masse horaire": "10"
+  },
+  {
+    "sujet": "Le développement personnel",
+    "categorie": "Self development",
+    "masse horaire": "20"
+  },
+  {
+    "sujet": "Le harcèlement sur le lieu de travail",
+    "categorie": "Self development",
+    "masse horaire": "15"
+  }
+]
